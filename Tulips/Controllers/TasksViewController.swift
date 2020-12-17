@@ -32,7 +32,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             for item in snapshot.children {
                 let task = Task(snapshot: item as! DataSnapshot)
                 _tasks.append(task)
-
             }
             tasks = _tasks
             self?.tableView.reloadData()
@@ -72,11 +71,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             task.ref?.removeValue()
         }
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-//        performSegue(withIdentifier: "newTaskSegue", sender: self)
-
-    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
