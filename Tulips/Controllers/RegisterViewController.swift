@@ -18,8 +18,8 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         errorRegLabel.text = ""
-        
     }
+    
     func displayWarningLabel(withText text: String) {
         errorRegLabel.text = text
         
@@ -31,18 +31,17 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    
     @IBAction func regPushAction(_ sender: UIButton) {
         guard let email = emailTFReg.text, let password = passTFReg.text, email != "", password != ""
         else {
-            displayWarningLabel(withText: "Неправильно :(")
+            displayWarningLabel(withText: "Что-то не так :(")
             return
         }
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            
             guard error == nil, user != nil else {
-                print(error!.localizedDescription)
+                print(error?.localizedDescription ?? "")
+                self.errorRegLabel.text = error?.localizedDescription
                 return
             }
             
@@ -50,9 +49,7 @@ class RegisterViewController: UIViewController {
             userRef?.setValue(["email": userInfo.email])
             
             if error == nil {
-
                 if user != nil {
-                    
                 } else {
                     print("пользователь не создан")
                 }

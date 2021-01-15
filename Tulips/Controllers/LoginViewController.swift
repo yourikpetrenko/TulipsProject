@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-
+    
     let segueIndetefier = "tasksSegue"
     var ref: DatabaseReference!
     
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         self.emailTextFild.delegate = self
         warnLabel.alpha = 0
         
-       
+        
         Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
             if user != nil {
                 self?.performSegue(withIdentifier: (self?.segueIndetefier)!, sender: nil)
@@ -41,22 +41,22 @@ class LoginViewController: UIViewController {
         emailTextFild.text = ""
         passwordTextFild.text = ""
     }
-
+    
     func displayWarningLabel(withText text: String) {
         warnLabel.text = text
         
         UIView.animate(withDuration: 3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1,
-            options: .curveEaseInOut, animations: { [weak self] in
-            self?.warnLabel.alpha = 1
-        }) { [weak self] complete in
+                       options: .curveEaseInOut, animations: { [weak self] in
+                        self?.warnLabel.alpha = 1
+                       }) { [weak self] complete in
             self?.warnLabel.alpha = 0
-    }
+        }
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
         guard let email = emailTextFild.text, let password = passwordTextFild.text, email != "", password != ""
-            else {
-             displayWarningLabel(withText: "Неправильно :(")
+        else {
+            displayWarningLabel(withText: "Неправильно :(")
             return
         }
         
@@ -72,51 +72,45 @@ class LoginViewController: UIViewController {
             
             self?.displayWarningLabel(withText: "пользователя не существует")
         }
-        
-               performSegue(withIdentifier: "tasksSegue", sender: self)
-        
+//        performSegue(withIdentifier: "tasksSegue", sender: self)
     }
     
-    @IBAction func registerTapped(_ sender: UIButton) {
-//        guard let email = emailTextFild.text, let password = passwordTextFild.text, email != "", password != ""
-//            else {
-//             displayWarningLabel(withText: "Неправильно :(")
-//            return
-//        }
-//
-//        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            
-//            guard error == nil, user != nil else {
-//
-//                print(error!.localizedDescription)
-//                return
-//            }
-//
-//            let userRef = self?.ref.child((userInfo?.uid)!)
-//            userRef?.setValue(["email": userInfo.email])
-            
-//            if error == nil {
-//                if user != nil {
-//
-//                } else {
-//                    print("пользователь не создан")
-//                }
-//            } else {
-//                    print(error!.localizedDescription)
-//                }
-//            }
+    @IBAction func registerTapped(_ sender: UIButton) { }
+    @IBAction func resetPassword(_ sender: UIButton) {
+        Auth.auth().sendPasswordReset(withEmail: "email@email") { error in
+            let forgotPasswordAlert = UIAlertController(title: "Забыли пароль?", message: "Введите адрес электронной почты", preferredStyle: .alert)
+            forgotPasswordAlert.addTextField { (textField) in
+                textField.placeholder = "Введите адрес электронной почты"
+            }
+            forgotPasswordAlert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
+            forgotPasswordAlert.addAction(UIAlertAction(title: "Сбросить пароль", style: .default, handler: { (action) in
+                let resetEmail = forgotPasswordAlert.textFields?.first?.text
+                Auth.auth().sendPasswordReset(withEmail: resetEmail!, completion: { (error) in
+                    if error != nil{
+                        let resetFailedAlert = UIAlertController(title: "Сброс не выполнен", message: "Ошибка: не введен адрес", preferredStyle: .alert)
+                        resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(resetFailedAlert, animated: true, completion: nil)
+                    }else {
+                        let resetEmailSentAlert = UIAlertController(title: "Пароль сброшен", message: "Проверьте почту", preferredStyle: .alert)
+                        resetEmailSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(resetEmailSentAlert, animated: true, completion: nil)
+                    }
+                })
+            }))
+            //PRESENT ALERT
+            self.present(forgotPasswordAlert, animated: true, completion: nil)
         }
+    }
 }
 
-    extension LoginViewController: UITextFieldDelegate {
-        
+extension LoginViewController: UITextFieldDelegate {
+    
     //    скрываем клавиатуру по нажатию на Done
-        
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
-        }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
-  
+
 
 

@@ -12,9 +12,7 @@ import FirebaseAuth
 var userInfo: UserInfo!
 var ref: DatabaseReference?
 var tasks = Array<Task>()
-let taskDateID = Date()
 let formatter = DateFormatter()
-var _taskId: String? = "\(Date())"
 
 class NewTaskViewController: UITableViewController  {
     var currentTask: Task?
@@ -25,11 +23,21 @@ class NewTaskViewController: UITableViewController  {
     @IBOutlet weak var payInfoCreate: UITextField?
     @IBOutlet weak var addressCreate: UITextField?
     @IBOutlet weak var phoneCreate: UITextField?
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupEditScreen()
         datePickerView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let currentUser = Auth.auth().currentUser else { return }
+        userInfo = UserInfo(user: currentUser)
+        ref = Database.database().reference(withPath: "users").child(String(userInfo.uid)).child("tasks")
+        observingDateTextField()
+        saveButtonIsHidden()
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -54,25 +62,30 @@ class NewTaskViewController: UITableViewController  {
     }
     
     //    MARK: Date Picker
-    func datePickerView() {
+    private func datePickerView() {
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
+        if #available(iOS 14.0, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
+        
         dateTaskCreate?.inputView = datePicker
         datePicker.datePickerMode = .dateAndTime
-        
         guard let localeID = Locale.preferredLanguages.first else { return }
         datePicker.locale = Locale(identifier: localeID)
-        
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneAction))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbar.setItems([flexSpace, doneButton], animated: true)
         dateTaskCreate?.inputAccessoryView = toolbar
-        
         datePicker.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
     }
     
     @objc func doneAction() {
         getDateFromPicker()
+        saveButton.isEnabled = true
         view.endEditing(true)
     }
     
@@ -80,14 +93,9 @@ class NewTaskViewController: UITableViewController  {
         getDateFromPicker()
     }
     
-    func getDateFromPicker() {
-        
+    private func getDateFromPicker() {
         formatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
         dateTaskCreate?.text = formatter.string(from: datePicker.date)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
     }
     
     @IBAction func saveTaskButton(_ sender: UIBarButtonItem) {
@@ -100,7 +108,6 @@ class NewTaskViewController: UITableViewController  {
         guard let phoneCreate = phoneCreate?.text else { return }
         
         if currentTask != nil {
-            
             print(currentTask?.dateTask ?? "")
             ref?.updateChildValues([currentTask?.dateTask ?? "" :
                                     ["dateTask": dateTaskCreate,
@@ -111,19 +118,22 @@ class NewTaskViewController: UITableViewController  {
                                     "phone": phoneCreate,
                                     "userId": userInfo.uid]])
         } else {
-            
-            let task = Task(userId: userInfo.uid, dateTask: dateTaskCreate, nameUser: nameUserCreate, flowersInfo: flowersInfoCreate, payInfo: payInfoCreate, address: addressCreate, phone: phoneCreate)
+            let task = Task(userId: userInfo.uid,
+                            dateTask: dateTaskCreate,
+                            nameUser: nameUserCreate,
+                            flowersInfo: flowersInfoCreate,
+                            payInfo: payInfoCreate,
+                            address: addressCreate,
+                            phone: phoneCreate)
             let taskRef = ref?.child(taskId.lowercased())
             taskRef?.setValue(task.convertToDictionary())
         }
         navigationController?.popViewController(animated: true)
         dismiss(animated: true)
-        
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
-        
         dismiss(animated: true)
     }
 }
@@ -133,6 +143,26 @@ extension NewTaskViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    private func observingDateTextField() {
+        saveButton.isEnabled = false
+        self.dateTaskCreate?.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+    }
+    
+    @objc private func textFieldChanged() {
+        if dateTaskCreate?.text?.isEmpty == false {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
+    }
+    func saveButtonIsHidden() {
+        if currentTask != nil {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
     }
 }
 
