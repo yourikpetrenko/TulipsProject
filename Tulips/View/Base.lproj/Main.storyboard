@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,10 +22,10 @@
                                 <color key="backgroundColor" red="0.77112514647198527" green="1" blue="0.83496484541330385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Xrs-oV-mRX">
-                                <rect key="frame" x="40" y="135.99999999999997" width="295" height="384.33333333333326"/>
+                                <rect key="frame" x="40" y="73.999999999999972" width="295" height="396.33333333333326"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-YI-9yM">
-                                        <rect key="frame" x="44.000000000000014" y="0.0" width="207.33333333333337" height="116.33333333333333"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-YI-9yM">
+                                        <rect key="frame" x="44.000000000000014" y="0.0" width="207.33333333333337" height="78.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tulips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNg-bV-mFg">
                                                 <rect key="frame" x="34" y="0.0" width="139" height="42"/>
@@ -32,7 +34,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибка, попробуй еще" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncK-Ud-IYQ">
-                                                <rect key="frame" x="0.0" y="96" width="207.33333333333334" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="58.000000000000007" width="207.33333333333334" height="20.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
                                                 <color key="textColor" red="0.62850967639999999" green="0.0" blue="0.02939718098" alpha="0.91061108729999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -40,7 +42,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TOF-bq-Oto">
-                                        <rect key="frame" x="0.0" y="166.33333333333331" width="295" height="78"/>
+                                        <rect key="frame" x="0.0" y="128.33333333333334" width="295" height="78"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eK9-86-JHr">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="34"/>
@@ -63,9 +65,9 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fMf-47-mbC">
-                                        <rect key="frame" x="40" y="294.33333333333331" width="215" height="90"/>
+                                        <rect key="frame" x="40" y="256.33333333333331" width="215" height="140"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt5-ba-Uil">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt5-ba-Uil">
                                                 <rect key="frame" x="0.0" y="0.0" width="215" height="40"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -76,7 +78,7 @@
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RXS-Vf-BqL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-T7-Cnf">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-T7-Cnf">
                                                 <rect key="frame" x="0.0" y="60" width="215" height="30"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Регистрация">
@@ -88,6 +90,15 @@
                                                         <segue key="commit" inheritsFrom="parent" id="AJV-ee-7rT"/>
                                                         <segue key="preview" inheritsFrom="commit" id="dc7-ta-DkX"/>
                                                     </segue>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Dd-9F-7GU">
+                                                <rect key="frame" x="0.0" y="110" width="215" height="30"/>
+                                                <state key="normal" title="Забыли пароль?">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="resetPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJK-70-gcy"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -107,18 +118,18 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xrs-oV-mRX" secondAttribute="trailing" constant="40" id="5Nr-AD-43X"/>
                             <constraint firstItem="6Lg-MR-EbW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6J1-2T-wcQ"/>
                             <constraint firstItem="Xrs-oV-mRX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Fxy-5f-h4g"/>
                             <constraint firstItem="6Lg-MR-EbW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Itl-T5-FxI"/>
                             <constraint firstItem="Xrs-oV-mRX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="SyU-zY-E65"/>
-                            <constraint firstItem="Xrs-oV-mRX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="cyj-cn-0t8"/>
+                            <constraint firstItem="Xrs-oV-mRX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="cyj-cn-0t8"/>
                             <constraint firstItem="6Lg-MR-EbW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-24" id="g1v-3Z-qbi"/>
                             <constraint firstAttribute="bottom" secondItem="6Lg-MR-EbW" secondAttribute="bottom" constant="-24" id="qyT-Ub-2K4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="emailTextFild" destination="eK9-86-JHr" id="tjN-Wr-w8A"/>
@@ -150,11 +161,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pmw-LR-ZRr">
                                 <rect key="frame" x="0.0" y="119" width="375" height="673"/>
                                 <color key="backgroundColor" red="0.67126995330000006" green="0.87036675210000003" blue="0.72498518229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="separatorColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" systemColor="systemRedColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" red="0.67126995330000006" green="0.87036675210000003" blue="0.72498518229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="pW7-dv-Z7V" customClass="CastomTableViewCell" customModule="Tulips" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="pW7-dv-Z7V" customClass="CastomTableViewCell" customModule="Tulips" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="191"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pW7-dv-Z7V" id="Z1f-L4-GHH">
@@ -170,7 +181,7 @@
                                                                 <constraint firstAttribute="height" constant="26.5" id="0Oo-u2-6Kr"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" systemColor="systemBlueColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxv-iK-cE8">
@@ -197,7 +208,7 @@
                                                                 <constraint firstAttribute="height" constant="22" id="8E4-Ke-End"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                                            <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" systemColor="systemPinkColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWY-6n-eUl">
@@ -250,6 +261,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="KeC-CQ-12N"/>
                         <color key="backgroundColor" red="0.67126995330000006" green="0.87036675210000003" blue="0.72498518229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KeC-CQ-12N" firstAttribute="trailing" secondItem="Jxd-Yx-Bzr" secondAttribute="trailing" id="MH6-gV-09u"/>
@@ -260,17 +272,16 @@
                             <constraint firstItem="Pmw-LR-ZRr" firstAttribute="trailing" secondItem="KeC-CQ-12N" secondAttribute="trailing" id="wUK-2H-XPT"/>
                             <constraint firstAttribute="bottom" secondItem="Pmw-LR-ZRr" secondAttribute="bottom" constant="20" symbolic="YES" id="xeO-pn-E8M"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="KeC-CQ-12N"/>
                     </view>
                     <navigationItem key="navigationItem" title="Заказы" id="wrh-up-j2l">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="xmark.icloud" catalog="system" id="JGe-tC-lhN">
-                            <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="systemPinkColor"/>
                             <connections>
                                 <action selector="signOutTapped:" destination="of6-Oa-KXt" id="uQS-JF-ziQ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cZB-UI-rZc">
-                            <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="systemPinkColor"/>
                             <connections>
                                 <action selector="addTapped:" destination="of6-Oa-KXt" id="0Lg-9S-mWo"/>
                                 <segue destination="P6a-mJ-gCw" kind="show" id="gI9-3h-dHP"/>
@@ -283,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGn-Ah-Vk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552.1739130434785" y="126.5625"/>
+            <point key="canvasLocation" x="775" y="126"/>
         </scene>
         <!--Новый заказ-->
         <scene sceneID="Ijc-zD-Vh8">
@@ -292,7 +303,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2sa-LK-Vhr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="UfH-wj-Mh5">
@@ -308,14 +319,14 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="59"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Дата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZG-ew-LMf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="25"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="23.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Укажите дату и время доставки или самовывоза" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISn-I6-kdi">
-                                                            <rect key="frame" x="0.0" y="35" width="343" height="24"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="33.333333333333336" width="343" height="25.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="G8y-wh-GNC" id="Ob7-9s-IB8"/>
@@ -343,14 +354,14 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="59"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Имя клиента" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLc-Vo-9Ae">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="26"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="24.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Укажите как зовут клиента" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zX9-Ij-sU9">
-                                                            <rect key="frame" x="0.0" y="34" width="343" height="25"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="32.333333333333336" width="343" height="26.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="G8y-wh-GNC" id="hdE-yX-uSe"/>
@@ -378,15 +389,15 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="152"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Инфо о цветах" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq9-i1-qyK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="19.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suV-SQ-Kl1">
-                                                            <rect key="frame" x="0.0" y="32" width="343" height="120"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <rect key="frame" x="0.0" y="27.333333333333336" width="343" height="124.66666666666666"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="textColor" systemColor="labelColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
@@ -412,14 +423,14 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="59"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Инфо об оплате" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-zg-RSJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="28.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="30.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                            <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" systemColor="systemPinkColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Укажите, оплачен ли заказ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p9A-89-LmQ">
-                                                            <rect key="frame" x="0.0" y="28.333333333333336" width="343" height="30.666666666666664"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="30.333333333333336" width="343" height="28.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="G8y-wh-GNC" id="TBG-dq-4vv"/>
@@ -447,14 +458,14 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="84"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqz-8A-vND">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.666666666666664"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="41.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Укажите адрес доставки" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-vv-rfk">
-                                                            <rect key="frame" x="0.0" y="43.666666666666657" width="343" height="40.333333333333343"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="41.666666666666657" width="343" height="42.333333333333343"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="G8y-wh-GNC" id="whG-ok-PFe"/>
@@ -482,14 +493,14 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="59"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWU-oy-pss">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="30.666666666666668"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="29.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Укажите номер телефона для связи" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3so-IF-3ry">
-                                                            <rect key="frame" x="0.0" y="30.666666666666664" width="343" height="28.333333333333336"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="29.333333333333336" width="343" height="29.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="G8y-wh-GNC" id="XZj-2i-u7u"/>
@@ -516,13 +527,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Новый заказ" id="tY8-nR-ZP1">
                         <barButtonItem key="leftBarButtonItem" image="delete.left" catalog="system" id="x23-Tq-JT5">
-                            <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="systemPinkColor"/>
                             <connections>
                                 <action selector="cancelAction:" destination="G8y-wh-GNC" id="daI-7a-Jse"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icloud.and.arrow.up" catalog="system" id="N8o-mS-s60">
-                            <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="systemPinkColor"/>
                             <connections>
                                 <action selector="saveTaskButton:" destination="G8y-wh-GNC" id="hAo-Yg-AGn"/>
                             </connections>
@@ -535,11 +546,12 @@
                         <outlet property="nameUserCreate" destination="zX9-Ij-sU9" id="h3Z-3l-iOh"/>
                         <outlet property="payInfoCreate" destination="p9A-89-LmQ" id="wmG-QO-M7e"/>
                         <outlet property="phoneCreate" destination="3so-IF-3ry" id="EfH-7U-GfN"/>
+                        <outlet property="saveButton" destination="N8o-mS-s60" id="kLL-RL-bKE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5l-xR-jQj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2335" y="126"/>
+            <point key="canvasLocation" x="1514" y="126"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="xhq-Q1-fiv">
@@ -558,7 +570,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpD-N8-VQB">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="34"/>
                                         <color key="backgroundColor" red="0.57012206320000003" green="0.31069093939999998" blue="0.61723464729999999" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                     </textField>
@@ -567,7 +579,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGz-n2-pBa">
                                 <rect key="frame" x="40" y="50" width="295" height="25"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="textColor" systemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Igc-Ix-OIF">
@@ -576,21 +588,20 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Придумайте пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-3Y-bNT">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="34"/>
                                         <color key="backgroundColor" red="0.77112514649999997" green="1" blue="0.83496484540000004" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="US4-fo-bRE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="US4-fo-bRE">
                                 <rect key="frame" x="40" y="262" width="295" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Зарегистрироваться">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="regPushAction:" destination="FqG-8u-UXd" eventType="touchUpInside" id="Xgr-98-1x5"/>
-                                    <segue destination="8DP-Vx-Po5" kind="presentation" identifier="taskSegueSecond" modalPresentationStyle="fullScreen" id="yzg-yU-R8C"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjR-um-cHY">
@@ -600,7 +611,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="EIj-nH-NYa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="US4-fo-bRE" firstAttribute="leading" secondItem="EIj-nH-NYa" secondAttribute="leading" constant="40" id="0Je-ZP-Qni"/>
                             <constraint firstItem="FGz-n2-pBa" firstAttribute="leading" secondItem="EIj-nH-NYa" secondAttribute="leading" constant="40" id="2mG-MZ-wBa"/>
@@ -622,18 +634,18 @@
                             <constraint firstItem="xjR-um-cHY" firstAttribute="leading" secondItem="EIj-nH-NYa" secondAttribute="leading" constant="40" id="w6f-xQ-tZs"/>
                             <constraint firstItem="EIj-nH-NYa" firstAttribute="trailing" secondItem="FGz-n2-pBa" secondAttribute="trailing" constant="40" id="zb9-FW-Sch"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="EIj-nH-NYa"/>
                     </view>
                     <navigationItem key="navigationItem" id="1bV-en-74U"/>
                     <connections>
                         <outlet property="emailTFReg" destination="hpD-N8-VQB" id="S4K-eK-kiB"/>
                         <outlet property="errorRegLabel" destination="xjR-um-cHY" id="Yhg-n8-hnx"/>
                         <outlet property="passTFReg" destination="cQS-3Y-bNT" id="uZh-Px-Wvl"/>
+                        <segue destination="8DP-Vx-Po5" kind="presentation" identifier="taskSegueSecond" modalPresentationStyle="fullScreen" id="NJd-ym-gWt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuW-dg-lG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-621"/>
+            <point key="canvasLocation" x="17" y="-621"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cPb-5m-6Wm">
@@ -654,7 +666,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBp-EP-oZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="127"/>
+            <point key="canvasLocation" x="50" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jKo-dX-qSb">
@@ -674,11 +686,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0DF-r4-Qdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2334" y="-621"/>
+            <point key="canvasLocation" x="1513" y="-601"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yzg-yU-R8C"/>
+        <segue reference="F0p-8c-SrM"/>
         <segue reference="mea-hz-dmH"/>
         <segue reference="tVQ-ay-l23"/>
     </inferredMetricsTieBreakers>
@@ -687,5 +699,26 @@
         <image name="delete.left" catalog="system" width="128" height="104"/>
         <image name="icloud.and.arrow.up" catalog="system" width="128" height="106"/>
         <image name="xmark.icloud" catalog="system" width="128" height="88"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

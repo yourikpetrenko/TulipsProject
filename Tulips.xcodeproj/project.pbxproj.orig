@@ -91,6 +91,7 @@
 		E2040442241F9D9E0065527E = {
 			isa = PBXGroup;
 			children = (
+				E2B2AF1524696874009C6B58 /* .gitignore */,
 				E204044D241F9D9E0065527E /* Tulips */,
 				E204044C241F9D9E0065527E /* Products */,
 				3332245B69E7C413CD35E729 /* Pods */,
@@ -219,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B2AF1624696874009C6B58 /* .gitignore in Resources */,
 				E204045B241F9DA00065527E /* LaunchScreen.storyboard in Resources */,
 				E2040465241FAFFB0065527E /* GoogleService-Info.plist in Resources */,
 				E2040458241F9DA00065527E /* Assets.xcassets in Resources */,
@@ -431,7 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RBX9FPWPZ6;
+				DEVELOPMENT_TEAM = U7J5F4326S;
 				INFOPLIST_FILE = "Tulips/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,7 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RBX9FPWPZ6;
+				DEVELOPMENT_TEAM = U7J5F4326S;
 				INFOPLIST_FILE = "Tulips/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
