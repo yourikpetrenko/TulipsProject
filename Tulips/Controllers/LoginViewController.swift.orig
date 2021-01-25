@@ -72,6 +72,7 @@ class LoginViewController: UIViewController {
             
             self?.displayWarningLabel(withText: "пользователя не существует")
         }
+<<<<<<< HEAD
 //        performSegue(withIdentifier: "tasksSegue", sender: self)
     }
     
@@ -100,12 +101,51 @@ class LoginViewController: UIViewController {
             //PRESENT ALERT
             self.present(forgotPasswordAlert, animated: true, completion: nil)
         }
+=======
+        
+        performSegue(withIdentifier: "tasksSegue", sender: self)
+        
+    }
+    
+    @IBAction func registerTapped(_ sender: UIButton) {
+        //        guard let email = emailTextFild.text, let password = passwordTextFild.text, email != "", password != ""
+        //            else {
+        //             displayWarningLabel(withText: "Неправильно :(")
+        //            return
+        //        }
+        //
+        //        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+        
+        //            guard error == nil, user != nil else {
+        //
+        //                print(error!.localizedDescription)
+        //                return
+        //            }
+        //
+        //            let userRef = self?.ref.child((userInfo?.uid)!)
+        //            userRef?.setValue(["email": userInfo.email])
+        
+        //            if error == nil {
+        //                if user != nil {
+        //
+        //                } else {
+        //                    print("пользователь не создан")
+        //                }
+        //            } else {
+        //                    print(error!.localizedDescription)
+        //                }
+        //            }
+>>>>>>> develop
     }
 }
 
 extension LoginViewController: UITextFieldDelegate {
     
     //    скрываем клавиатуру по нажатию на Done
+<<<<<<< HEAD
+=======
+    
+>>>>>>> develop
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

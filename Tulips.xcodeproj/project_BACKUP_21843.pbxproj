@@ -22,11 +22,16 @@
 		E26AA5002422607B0032D660 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AA4FF2422607B0032D660 /* NewTaskViewController.swift */; };
 		E288BEE7245D4ADA007D2670 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E288BEE6245D4ADA007D2670 /* RegisterViewController.swift */; };
 		E2B2AF1624696874009C6B58 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E2B2AF1524696874009C6B58 /* .gitignore */; };
+<<<<<<< HEAD
 		F8E8B1EFDA6D8ACBC66BC739 /* Pods_Tulips.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE26D96D8EDA05ECBFDC9E5E /* Pods_Tulips.framework */; };
+=======
+		E2C6757D0C2076BB99A74380 /* Pods_Tulips.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3942E5752E86810BEC53D2D4 /* Pods_Tulips.framework */; };
+>>>>>>> develop
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		331063CE964422508D024309 /* Pods_Tulips.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tulips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3942E5752E86810BEC53D2D4 /* Pods_Tulips.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tulips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D458C4F1C8E067028802D0 /* Pods-Tulips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tulips.release.xcconfig"; path = "Target Support Files/Pods-Tulips/Pods-Tulips.release.xcconfig"; sourceTree = "<group>"; };
 		87F7B491AFDB98EBBDCDA599 /* Pods-Tulips.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tulips.debug.xcconfig"; path = "Target Support Files/Pods-Tulips/Pods-Tulips.debug.xcconfig"; sourceTree = "<group>"; };
 		E202232A24255E2D00F4B13C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -54,7 +59,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8033423ECACA55A9CD20B936 /* Pods_Tulips.framework in Frameworks */,
+<<<<<<< HEAD
 				F8E8B1EFDA6D8ACBC66BC739 /* Pods_Tulips.framework in Frameworks */,
+=======
+				E2C6757D0C2076BB99A74380 /* Pods_Tulips.framework in Frameworks */,
+>>>>>>> develop
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +80,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		A4A3D4344330D2C1766F17E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				EE26D96D8EDA05ECBFDC9E5E /* Pods_Tulips.framework */,
+=======
+		44FAC1035F0ED1FA7BE3E99E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3942E5752E86810BEC53D2D4 /* Pods_Tulips.framework */,
+>>>>>>> develop
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -95,7 +111,11 @@
 				E204044D241F9D9E0065527E /* Tulips */,
 				E204044C241F9D9E0065527E /* Products */,
 				3332245B69E7C413CD35E729 /* Pods */,
+<<<<<<< HEAD
 				A4A3D4344330D2C1766F17E0 /* Frameworks */,
+=======
+				44FAC1035F0ED1FA7BE3E99E /* Frameworks */,
+>>>>>>> develop
 			);
 			sourceTree = "<group>";
 		};
@@ -189,7 +209,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
+<<<<<<< HEAD
 				LastUpgradeCheck = 1220;
+=======
+				LastUpgradeCheck = 1230;
+>>>>>>> develop
 				ORGANIZATIONNAME = Jura;
 				TargetAttributes = {
 					E204044A241F9D9E0065527E = {

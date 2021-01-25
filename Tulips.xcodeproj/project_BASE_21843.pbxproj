@@ -22,7 +22,6 @@
 		E26AA5002422607B0032D660 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AA4FF2422607B0032D660 /* NewTaskViewController.swift */; };
 		E288BEE7245D4ADA007D2670 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E288BEE6245D4ADA007D2670 /* RegisterViewController.swift */; };
 		E2B2AF1624696874009C6B58 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E2B2AF1524696874009C6B58 /* .gitignore */; };
-		F8E8B1EFDA6D8ACBC66BC739 /* Pods_Tulips.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE26D96D8EDA05ECBFDC9E5E /* Pods_Tulips.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		E26AA4FF2422607B0032D660 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
 		E288BEE6245D4ADA007D2670 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E2B2AF1524696874009C6B58 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		EE26D96D8EDA05ECBFDC9E5E /* Pods_Tulips.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tulips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +52,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8033423ECACA55A9CD20B936 /* Pods_Tulips.framework in Frameworks */,
-				F8E8B1EFDA6D8ACBC66BC739 /* Pods_Tulips.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,14 +66,6 @@
 				86D458C4F1C8E067028802D0 /* Pods-Tulips.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		A4A3D4344330D2C1766F17E0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EE26D96D8EDA05ECBFDC9E5E /* Pods_Tulips.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AAA80D50FD188F82CD64B955 /* Frameworks */ = {
@@ -95,7 +84,6 @@
 				E204044D241F9D9E0065527E /* Tulips */,
 				E204044C241F9D9E0065527E /* Products */,
 				3332245B69E7C413CD35E729 /* Pods */,
-				A4A3D4344330D2C1766F17E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,21 +98,13 @@
 		E204044D241F9D9E0065527E /* Tulips */ = {
 			isa = PBXGroup;
 			children = (
-				E288BEE5245C262C007D2670 /* Model */,
-				E229058B258BA581005F5643 /* View */,
-				E23F6E85245C2544006AAB08 /* Controllers */,
-				E23F6E86245C256D006AAB08 /* Supporting files */,
-			);
-			path = Tulips;
-			sourceTree = "<group>";
-		};
-		E229058B258BA581005F5643 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				E26AA4FB2420E8780032D660 /* CastomTableViewCell.swift */,
+				E288BEE5245C262C007D2670 /* Model */,
+				E23F6E86245C256D006AAB08 /* Supporting files */,
+				E23F6E85245C2544006AAB08 /* Controllers */,
 				E2040454241F9D9E0065527E /* Main.storyboard */,
 			);
-			path = View;
+			path = Tulips;
 			sourceTree = "<group>";
 		};
 		E23F6E85245C2544006AAB08 /* Controllers */ = {
@@ -189,7 +169,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Jura;
 				TargetAttributes = {
 					E204044A241F9D9E0065527E = {
@@ -337,7 +317,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -398,7 +377,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
