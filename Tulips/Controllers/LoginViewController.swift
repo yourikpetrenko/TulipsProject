@@ -14,7 +14,6 @@ class LoginViewController: UIViewController {
     let segueIndetefier = "tasksSegue"
     var ref: DatabaseReference!
     
-    
     @IBOutlet weak var warnLabel: UILabel!
     @IBOutlet weak var emailTextFild: UITextField!
     @IBOutlet weak var passwordTextFild: UITextField!
@@ -26,7 +25,6 @@ class LoginViewController: UIViewController {
         self.passwordTextFild.delegate = self
         self.emailTextFild.delegate = self
         warnLabel.alpha = 0
-        
         
         Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
             if user != nil {
@@ -72,7 +70,6 @@ class LoginViewController: UIViewController {
             
             self?.displayWarningLabel(withText: "пользователя не существует")
         }
-//        performSegue(withIdentifier: "tasksSegue", sender: self)
     }
     
     @IBAction func registerTapped(_ sender: UIButton) { }
@@ -104,8 +101,6 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: UITextFieldDelegate {
-    
-    //    скрываем клавиатуру по нажатию на Done
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

@@ -9,12 +9,10 @@
 import UIKit
 
 class CastomTableViewCell: UITableViewCell {
-
     @IBOutlet weak var dateTaskLabel: UILabel!
     @IBOutlet weak var nameUserLabel: UILabel!
     @IBOutlet weak var flowersInfoLabel: UILabel!
     @IBOutlet weak var payInfoLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    
 }

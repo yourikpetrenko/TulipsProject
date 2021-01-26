@@ -11,7 +11,6 @@ import FirebaseAuth
 import Firebase
 
 struct Task {
-    
     let ref: DatabaseReference?
     let userId: String?
     let dateTask: String?
@@ -21,10 +20,9 @@ struct Task {
     let address: String?
     let phone: String?
     
-    
     init(userId: String, dateTask: String,
-    nameUser: String, flowersInfo: String,
-    payInfo: String, address: String, phone: String) {
+         nameUser: String, flowersInfo: String,
+         payInfo: String, address: String, phone: String) {
         self.userId = userId
         self.dateTask = dateTask
         self.nameUser = nameUser
