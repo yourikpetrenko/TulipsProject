@@ -10,15 +10,15 @@ import UIKit
 import Firebase
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       self.tableView.tableFooterView = UIView()
-       guard let currentUser = Auth.auth().currentUser else { return }
-       userInfo = UserInfo(user: currentUser)
-       ref = Database.database().reference(withPath: "users").child(String(userInfo.uid)).child("tasks")
+        self.tableView.tableFooterView = UIView()
+        guard let currentUser = Auth.auth().currentUser else { return }
+        userInfo = UserInfo(user: currentUser)
+        ref = Database.database().reference(withPath: "users").child(String(userInfo.uid)).child("tasks")
     }
     
     override  func viewWillAppear(_ animated: Bool) {
@@ -34,7 +34,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         })
     }
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CastomTableViewCell
         let dateTask = tasks[indexPath.row].dateTask
         let nameTask = tasks[indexPath.row].nameUser
@@ -42,7 +42,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let payInfoTask = tasks[indexPath.row].payInfo
         let addressTask = tasks[indexPath.row].address
         let taskPhone = tasks[indexPath.row].phone
-
         cell.dateTaskLabel?.text = dateTask
         cell.nameUserLabel?.text = nameTask
         cell.flowersInfoLabel?.text = flowersInfoTask
@@ -52,7 +51,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
     }
     
@@ -67,7 +66,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let task = tasks[indexPath.row]
                 task.ref?.removeValue()
             }
-        
+            
             let cancelDelite = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
             alertDelite.addAction(actionDelite)
             alertDelite.addAction(cancelDelite)
@@ -83,15 +82,14 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             newTaskVC.currentTask = task
         }
     }
-   
-//    @IBAction func addTapped(_ sender: UIBarButtonItem) { }
+    
     @IBAction func signOutTapped(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Выход из учетной записи", message: "Вы действительно хотите выйти?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Выйти", style: .default) { _ in
             do {
                 try Auth.auth().signOut()
                 self.navigationController?.popViewController(animated: true)
-
+                
                 self.dismiss(animated: true)
             } catch {
                 print(error.localizedDescription)
@@ -103,6 +101,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         alert.addAction(cancel)
         self.present(alert, animated: true, completion: nil)
     }
- 
+    
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {}
 }

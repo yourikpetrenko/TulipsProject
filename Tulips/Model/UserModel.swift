@@ -11,7 +11,6 @@ import FirebaseAuth
 import Firebase
 
 struct UserInfo {
-    
     let uid: String
     let email: String
     
